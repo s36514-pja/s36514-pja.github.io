@@ -1,33 +1,44 @@
 <!doctype html>
 <html lang="en">
+
   <head>
-    <script type="module" src="/src/main.js"></script>
     <meta charset="UTF-8" />
+    <meta name="description" content="artist portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.js"></script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" type="text/css" href="/src/styles/style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <meta name="description" content="artist portfolio">
+    <title>Home</title>
   </head>
+
   <body>
+    
     <!--LANDING PAGE-->
     <div id="landing">
-      <div id="center">
+      <div id="center"> 
         <!--Zagadka-->
         <div class="riddleStyle" id="riddle">
-          <input type="" id="psswd" name="password" value="" required class="riddle-TextField" />
-          <br>
-          <input type="button" name="Confirm" value="Potwierdź" class="riddle-Button"/>
+          <form id="zagadka-field">
+            <input type="text" id="psswd" name="password" value="" required class="riddle-TextField" />
+            <br>
+            <input type="submit" name="Confirm" value="Potwierdź" class="riddle-Button"/>
+          </form>
         </div>
         <div id="haslo"></div>
         <!--Backdrop i style-->
         <div id="LandingBackdrop"></div>
       </div>
-    </div>
+    </div>    
     
     <!--CONTENT-->
-    <div></div>
+    <main id="content">
+      
+    </main>
+    
     <!--SPACER-->
-    <div id="spacer"></div>
+    <footer id="spacer">
+       
+    </footer>
+
   </body>
 </html>
