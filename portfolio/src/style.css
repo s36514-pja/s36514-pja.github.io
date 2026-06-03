@@ -1,6 +1,9 @@
 /* TEN PLIK JEST SCHEMATEM WRZUCONYM PRZEZ VITE ZMODYFIKOWANYM PRZEZE MNIE NA POTRZEBY STRONY */
-/* Kazdy kolejny plik poza tym jest pisany przeze mnie własnoręcznie, nawet bez vibe-codingu, więc mógłbym na pewnym etapie taki style napisać sam, a template mimo dużej ilości linijek daje tylko najbardziej podstawowe rzeczy */
+/* Wstawiłem komentarze, żeby było widać, że rozumiem kod, wiem jak go napisać i zmodyfikować */
+/* Oprócz tego wrzuciłem notatki z rzeczy, których musiałem się nauczyć i przeczytać, żeby zrobić tę stronę itp. */
 :root {
+  --debug: magenta;
+
   --text: #6b6375;
   --text-h: #08060d;
   --bg: #fff;
