@@ -15,24 +15,40 @@
     
     <!--LANDING PAGE-->
     <div id="landing">
-      <div id="center"> 
-        <!--Zagadka-->
-        <div class="riddleStyle" id="riddle">
-          <form id="zagadka-field">
-            <input type="text" id="psswd" name="password" value="" required class="riddle-TextField" />
-            <br>
-            <input type="submit" name="Confirm" value="Potwierdź" class="riddle-Button"/>
-          </form>
-        </div>
-        <div id="haslo"></div>
-        <!--Backdrop i style-->
-        <div id="LandingBackdrop"></div>
+      <div id="riddle-container">
+        <div id="riddle-text"></div>
+        <p id="riddle-source"></p>
+        <form id="zagadka-field">
+          <input 
+            type="text" 
+            id="psswd" 
+            name="password" 
+            required 
+            autocomplete="off" 
+            class="riddle-TextField"
+          />
+          <input 
+            type="submit" 
+            value="Confirm" 
+            class="riddle-Button"
+          />
+        </form>
+        <p id="riddle-feedback"></p>
       </div>
+      <div id="landging-backdrop"></div>
     </div>    
     
     <!--CONTENT-->
     <main id="content">
-      
+      <header id="portfolio-header">
+        
+      </header>
+      <section id="gallery">
+        
+      </section>
+      <footer id="portfolio-footer">
+        
+      </footer>
     </main>
     
     <!--SPACER-->

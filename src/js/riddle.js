@@ -1,16 +1,17 @@
 import riddlesData from '../data/zagadki.json';
 import { lang } from './i18n.js';
-console.info('riddle.js loaded');
+import { onWrongAnswer, onCorrectAnswer, refreshUI } from './ui.js'
+console.log('riddle.js loaded');
 
 const arrayLength = riddlesData.length;
 let randomRiddle = riddlesData[Math.floor(Math.random() * arrayLength)];
-console.info(`arrayLength: ${arrayLength} riddle ID: ${randomRiddle}`)
+console.log(`arrayLength: ${arrayLength} riddle ID: ${randomRiddle}`)
 
 let activeRiddle = randomRiddle;
 let activeLang = lang;
 let question = activeRiddle.riddle[activeLang];
 let source = activeRiddle.source ?? "";
-console.log(question)
+console.info(question)
 // ^ odpowiada za wylosowanie zagadki, zadeklarowanie potrzebnych zmiennych i przypisanie do nich wartości z pliku .json
 
 function validate(input) { 
@@ -32,9 +33,11 @@ function handleSubmit(event) {
   if (event) event.preventDefault();
   const userInput = document.getElementById('psswd').value;
   if (validate(userInput)) {
-    console.log('prawidlowa_odpowiedz')
+    onCorrectAnswer()
+    console.info('prawidlowa_odpowiedz')
   } else {
-    console.log('bledna_odpowiedz')
+    onWrongAnswer()
+    console.info('bledna_odpowiedz')
   }
 } // ^ druga funkcja nasłuchuje inputu użytkownika, i w momencie zatwierdzenia odpowiedzi, odpowiada, czy jest poprawna, czy błędna
 // poniżej znajdują się debuggery - narzędzia do sprawdzania kodu za pomocą DevTools'ów
@@ -44,24 +47,34 @@ if (import.meta.env.DEV) {
       localStorage.clear();
       location.reload();
     },
+    rerollRiddle: () => {
+      const randomIndex = Math.floor(Math.random() * arrayLength)
+      window.debug.setRiddle(randomIndex)
+      if (window.debug) window.debug.refreshUI
+    },
     setRiddle: (index) => {
       activeRiddle = riddlesData[index]
       question = activeRiddle.riddle[activeLang]
       source = activeRiddle.source ?? ""
-      console.log(question)
+      console.info(question)
+      if (window.debug) window.debug.refreshUI
     },
     setLang: (newLang) => {
       activeLang = (newLang)
       question = activeRiddle.riddle[activeLang]
-      console.log(question)
+      console.info(question)
+      if (window.debug) window.debug.refreshUI
     },
     checkQuestion: () => { 
       question = activeRiddle.riddle[activeLang]; 
-      console.log(question) 
+      console.info(question) 
     },
     checkValid: (pssd) => {
-      console.log(validate(pssd));
+      console.info(validate(pssd));
     }
   }
 }
 export { question, source, handleSubmit }
+export function getRiddleData() {
+  return { question, source, activeLang }
+}

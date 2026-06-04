@@ -1,0 +1,32 @@
+import { getRiddleData, handleSubmit } from './riddle.js'
+const { question, source } = getRiddleData();
+// destrukturyzuje wyeksportowaną funckcję z riddle.js
+
+const riddleText = document.getElementById('riddle-text')
+const riddleSource = document.getElementById('riddle-source')
+const feedback = document.getElementById('riddle-feedback')
+const landing = document.getElementById('landing')
+const content = document.getElementById('content')
+console.log(riddleText, riddleSource, feedback)
+// deklaruje elementy z DOM'u
+
+riddleText.textContent = question
+riddleSource.textContent = source
+// podłącza treść zagadki i jej źródło do zadeklarowanych wcześniej elementów
+
+export function onWrongAnswer() {
+  feedback.textContent = 'Wrong Answer'
+}
+export function onCorrectAnswer () {
+  feedback.textContent = ''
+  transitionToPortfolio()
+}
+export function transitionToPortfolio() {
+  landing.style.display = "none";
+  content.style.display = "block";
+}
+export function refreshUI() {
+  const { question, source } = getRiddleData();
+  riddleText.textContent = question
+  riddleSource.textContent = source
+}
