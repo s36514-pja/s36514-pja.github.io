@@ -1,11 +1,14 @@
 import riddlesData from '../data/zagadki.json';
 import { lang } from './i18n.js';
 import { onWrongAnswer, onCorrectAnswer, refreshUI } from './ui.js'
-console.log('riddle.js loaded');
+
 
 const arrayLength = riddlesData.length;
 let randomRiddle = riddlesData[Math.floor(Math.random() * arrayLength)];
+console.group('riddleLog')
+console.log('riddle.js loaded');
 console.log(`arrayLength: ${arrayLength} riddle ID: ${randomRiddle}`)
+console.groupEnd();
 
 let activeRiddle = randomRiddle;
 let activeLang = lang;
@@ -77,4 +80,9 @@ if (import.meta.env.DEV) {
 export { question, source, handleSubmit }
 export function getRiddleData() {
   return { question, source, activeLang }
+}
+export function rerollRiddle() { 
+  const randomIndex = Math.floor(Math.random() * arrayLength)
+  window.debug.setRiddle(randomIndex)
+  if (window.debug) window.debug.refreshUI
 }

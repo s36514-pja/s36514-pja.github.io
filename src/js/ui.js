@@ -7,7 +7,7 @@ const riddleSource = document.getElementById('riddle-source')
 const feedback = document.getElementById('riddle-feedback')
 const landing = document.getElementById('landing')
 const content = document.getElementById('content')
-console.log(riddleText, riddleSource, feedback)
+//console.log(riddleText, riddleSource, feedback)
 // deklaruje elementy z DOM'u
 
 riddleText.textContent = question
@@ -27,6 +27,7 @@ export function transitionToPortfolio() {
 }
 export function refreshUI() {
   const { question, source } = getRiddleData();
+  console.log('refreshUI called:', question, source)
   riddleText.textContent = question
   riddleSource.textContent = source
 }
