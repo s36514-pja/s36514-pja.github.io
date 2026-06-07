@@ -1,0 +1,40 @@
+:root {
+
+}
+
+#content {
+  display: grid;
+  grid-template-rows: 15svh 1fr auto;
+  grid-template-areas: 
+  "header" 
+  "gallery" 
+  "footer";
+  min-height: 100svh;
+  height: 100%;
+  overflow: auto;
+}
+
+#portfolio-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#gallery {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "rgb" "cmyk";
+}
+
+#showcase {
+  grid-area: rgb;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#showcase2 {
+  grid-area: cmyk;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}

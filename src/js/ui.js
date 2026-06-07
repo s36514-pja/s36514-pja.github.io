@@ -16,7 +16,7 @@ riddleSource.textContent = source
 // podłącza treść zagadki i jej źródło do zadeklarowanych wcześniej elementów
 
 export function onWrongAnswer() {
-  feedback.textContent = 'Wrong Answer'
+  feedback.textContent = 'Błędna odpowiedź'
   playWrongAnswer()
 }
 export function onCorrectAnswer () {
@@ -27,8 +27,8 @@ export function onCorrectAnswer () {
 }
 export function transitionToPortfolio() {
   document.body.style.overflow = ''
-  landing.style.display = "none";
-  content.style.display = "block";
+  landing.classList.add("hidden");
+  content.classList.add("visible");
 }
 export function refreshUI() {
   const { question, source } = getRiddleData();

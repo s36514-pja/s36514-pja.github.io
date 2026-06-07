@@ -7,9 +7,12 @@ import './styles/nav.css'
 import './styles/portfolio.css'
 import './styles/animations.css'
 import './js/animations.js'
+import { initBackground } from './js/animations.js'
 //import javascriptLogo from './assets/javascript.svg'
 //import viteLogo from './assets/vite.svg'
 //import heroImg from './assets/hero.png'
+//
+initBackground()
 //
 if (import.meta.env.DEV) {
   window.debug.refreshUI = refreshUI
