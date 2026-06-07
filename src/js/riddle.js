@@ -79,7 +79,9 @@ if (import.meta.env.DEV) {
 }
 export { question, source, handleSubmit }
 export function getRiddleData() {
-  return { question, source, activeLang }
+  return { question, source, activeLang,
+    answerLength: activeRiddle.answer[activeLang].length
+  }
 }
 export function rerollRiddle() { 
   const randomIndex = Math.floor(Math.random() * arrayLength)

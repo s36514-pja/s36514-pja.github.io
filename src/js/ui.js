@@ -1,4 +1,5 @@
 import { getRiddleData, handleSubmit } from './riddle.js'
+import { playWrongAnswer, playTransition } from './animations.js'
 const { question, source } = getRiddleData();
 // destrukturyzuje wyeksportowaną funckcję z riddle.js
 
@@ -16,12 +17,16 @@ riddleSource.textContent = source
 
 export function onWrongAnswer() {
   feedback.textContent = 'Wrong Answer'
+  playWrongAnswer()
 }
 export function onCorrectAnswer () {
   feedback.textContent = ''
-  transitionToPortfolio()
+  const { answerLength } = getRiddleData()
+  playTransition(answerLength, transitionToPortfolio)
+  //transitionToPortfolio()
 }
 export function transitionToPortfolio() {
+  document.body.style.overflow = ''
   landing.style.display = "none";
   content.style.display = "block";
 }

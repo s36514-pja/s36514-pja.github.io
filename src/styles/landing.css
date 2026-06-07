@@ -1,0 +1,218 @@
+:root {
+  --z-background: 0;
+  --z-backdrop: 1;
+  --z-content: 2;
+  --z-ui: 3;
+}
+
+canvas {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-background);
+}
+
+#landing {
+  position: relative;
+  width: 100svw;
+  height: 100svh;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10svh 5svh 20svh 5svh;
+
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "riddle"
+    "lock";
+  background-color: var(--bg);
+}
+
+#landing-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-backdrop);
+  background: radial-gradient(ellipse at center, transparent 0%, var(--bg) 60%);
+  pointer-events: none;
+}
+
+#riddle-container {
+  grid-area: riddle;
+  position: relative;
+  z-index: var(--z-content);
+  transform: translate(0, 15%);
+
+  display: flex;
+  gap: 2px;
+  width: 70svw;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#riddle-text {
+  order: 0;
+
+  padding: 1px 5px;
+  text-align: justify;
+  align-self: center;
+  max-width: 95%;
+  max-height: 40svh;
+
+  font-family: var(--sans);
+  font-size: clamp(0.875rem, 3.2vw, 2rem);
+  line-height: 1;
+  text-wrap: pretty;
+  white-space: pre-line;
+
+  color: var(--text-h);
+  letter-spacing: -0.005em;
+}
+
+#riddle-source {
+  order: 1;
+
+  align-self: center;
+  font-style: italic;
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  vertical-align: text-top;
+  margin-bottom: 1svh;
+}
+
+#zagadka-field {
+  order: 2;
+
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  justify-content: center;
+}
+
+.riddle-TextField {
+  width: clamp(10ch, 70%, 30ch);
+  box-sizing: border-box;
+  text-align: justify;
+  font-family: var(--mono);
+  font-size: clamp(0.875rem, 2vw, 1.25rem);
+
+  appearance: none;
+  background: transparent;
+  border: none;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  color: var(--text-h);
+  padding: 0.5rem 0;
+}
+.riddle-TextField:focus {
+  outline: solid var(--accent);
+  box-shadow: 0 0 8px 2px var(--accent);
+}
+::placeholder {
+
+}
+
+.riddle-Button {
+  font-family: var(--mono);
+  font-size: clamp(0.875rem, 2vw, 1.25rem);
+  width: 4ch;
+
+  appearance: none;
+  background: solid;
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.2s, color 0.2s;
+}
+.riddle-Button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#key-lock {
+  grid-area: lock;
+  z-index: var(--z-content);
+  position: absolute;
+
+
+
+  padding: 2% 0% 0% 0%;
+
+  display: flex;
+  justify-content: center;
+}
+
+#lock-mechanism {
+  grid-area: lock;
+  position: absolute;
+
+
+  display: flex;
+  flex-direction: row;
+  width: 90svw;
+  margin-top: 5%;
+  padding: 10px;
+  gap: 5px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#content {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-speed) ease;
+}
+#content.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+#landing.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-speed) ease;
+}
+
+#author {
+  z-index: var(--z-ui);
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+
+  font-size:0.875rem;
+  color: var(--text);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+#lang-switch {
+  z-index: var(--z-ui);
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+#riddle-feedback {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 10svh 10svh 10svh 10svh;
+
+  font-size: 2.5vw;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent);
+  letter-spacing: 0.05rem;
+  line-height: 1.2em;
+}

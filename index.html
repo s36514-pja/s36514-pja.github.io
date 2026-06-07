@@ -5,9 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="description" content="artist portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <script type="module" src="/src/main.js"></script>
+    
+    <link rel="stylesheet" href="https://use.typekit.net/ubn0chn.css">
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
     <link rel="stylesheet" type="text/css" href="/src/styles/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/src/styles/animations.css">
+    
     <title>Home</title>
   </head>
 
@@ -15,9 +22,15 @@
     
     <!--LANDING PAGE-->
     <div id="landing">
+
+      <canvas id="bg-canvas"></canvas>
+
+      <div id="landing-backdrop"></div>
+
       <div id="riddle-container">
         <div id="riddle-text"></div>
         <p id="riddle-source"></p>
+
         <form id="zagadka-field">
           <input 
             type="text" 
@@ -29,13 +42,19 @@
           />
           <input 
             type="submit" 
-            value="Confirm" 
+            value="✓" 
             class="riddle-Button"
           />
         </form>
-        <p id="riddle-feedback"></p>
       </div>
-      <div id="landging-backdrop"></div>
+
+      <div id="lock-mechanism"></div>
+      <div id="key-lock">
+        <!--TUTAJ BĘDZIE GRAFIKA WEKTOROWA W HTML-->
+        <p>placeholder_to_be_shook</p>
+      </div>
+
+      <h1 id="riddle-feedback"></h1>
     </div>    
     
     <!--CONTENT-->

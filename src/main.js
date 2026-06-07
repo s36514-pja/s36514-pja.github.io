@@ -1,7 +1,12 @@
-import './styles/style.css';
 import './js/ui.js'
 import { refreshUI } from './js/ui.js'
 import { question, source, handleSubmit, rerollRiddle } from './js/riddle.js';
+import './styles/style.css'
+import './styles/landing.css'
+import './styles/nav.css'
+import './styles/portfolio.css'
+import './styles/animations.css'
+import './js/animations.js'
 //import javascriptLogo from './assets/javascript.svg'
 //import viteLogo from './assets/vite.svg'
 //import heroImg from './assets/hero.png'
