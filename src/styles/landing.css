@@ -52,13 +52,13 @@ canvas {
   grid-area: riddle;
   position: relative;
   z-index: var(--z-content);
-  transform: translate(0, 5%);
+  transform: translate(0, 5%) scale(1.2);
   align-self: end;
 
   display: flex;
   gap: 2px;
-  width: min(70ch, 90%);
-  height: auto;
+  width: min(70ch 100% 70vw);
+  height: 40vh;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
@@ -69,12 +69,13 @@ canvas {
 
   padding: 0 0 5px 0;
   text-align: justify;
+  text-justify: inter-word;
   align-self: center;
-  max-width: 95%;
-  max-height: 40svh;
+  max-width: 70%;
+  max-height: 50vh;
 
   font-family: var(--sans);
-  font-size: clamp(0.875rem, 4vw, 2rem);
+  font-size: clamp(0.875rem, 4vw, 2.5rem);
   line-height: 1;
   text-wrap: pretty;
   white-space: pre-line;
@@ -100,7 +101,7 @@ canvas {
   padding: 0.5rem 1rem;
   display: flex;
   gap: 2%;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
 }
 
@@ -150,6 +151,7 @@ canvas {
 
 #vislock {
   grid-area: lock;
+  box-sizing: border-box;
   align-self: start;
   display: flex;
   flex-direction: column;
@@ -157,19 +159,20 @@ canvas {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+  padding: 2.5% 5%;
 }
 
-#riddle-feedback {
-  z-index: var(--z-content);
-  position: relative;
-  align-self: center;
-
-  font-size: 2.5vw;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--text);
-  letter-spacing: 0.05rem;
-  line-height: 1.2em;
+#button {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  height: 100%;
 }
 
 #key-lock {
@@ -181,11 +184,17 @@ canvas {
   align-self: center;
   transform: translateY(2%);
   padding: 0% 0% 0% 0%;
+
+  display: flex;
+  align-items: center;
+}
+#key-lock:hover #lock-svg{
+  transform: scale(1.2);
+  transform-origin: center;
 }
 
 #lock-svg {
-  width: clamp(3rem, 5vw, 6rem);
-  height: 10svh;
+  width: 2vw;
   color: var(--text-h);
   transition: color 0.3s;
 }
@@ -202,10 +211,24 @@ canvas {
   display: flex;
   flex-direction: row;
   width: 90svw;
+  height: 50vh;
   padding: 0 0 10px 0;
   gap: 5px;
   justify-content: center;
   align-items: flex-start;
+}
+
+#riddle-feedback {
+  z-index: var(--z-content);
+  position: relative;
+  align-self: center;
+
+  font-size: 2.5vw;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text);
+  letter-spacing: 0.05rem;
+  line-height: 1.2em;
 }
 
 #content {
@@ -223,31 +246,5 @@ canvas {
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-speed) ease;
-}
-
-#author {
-  z-index: var(--z-ui);
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-
-  font-size:0.875rem;
-  color: var(--text);
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-}
-
-#lang-switch {
-  z-index: var(--z-ui);
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-
-  display: flex;
-  gap: 1rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text);
 }
 

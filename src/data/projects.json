@@ -1,0 +1,26 @@
+[
+  {
+    "id": "projekt-01",
+    "title": "Project One",
+    "category": "rgb",
+    "thumbnail": "/images/projekt-01-thumb.jpg",
+    "description": "Short description for the gallery card",
+    "body": "Full project description for the presentation page",
+    "images": [
+      "/images/projekt-01-a.jpg",
+      "/images/projekt-01-b.jpg"
+    ],
+    "alt": "",
+    "year": "2024"
+  },
+  {
+    "id": "projekt-02",
+    "title": "Project Two",
+    "category": "cmyk",
+    "thumbnail": "/images/projekt-02-thumb.jpg",
+    "description": "Short description",
+    "body": "Full description",
+    "images": [],
+    "year": "2023"
+  }
+]

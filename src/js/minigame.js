@@ -1,6 +1,6 @@
 import '../styles/minigame.css'
 import { injectNav, injectFooter } from './components.js'
-import { initBackground } from './animations.js'
+import { initBackground, playWrongAnswer, playTransition } from './animations.js'
 import riddlesData from '../data/zagadki.json'
 import { lang } from './i18n.js'
 
@@ -62,18 +62,28 @@ if (form) {
   form.addEventListener('submit', (event) => {
     event.preventDefault()
     const userInput = document.getElementById('psswd').value
-
     if (validate(userInput)) {
-      updateScore(true)
-      setTimeout(() => loadNewRiddle(), 1000)
+      onCorrect()
     } else {
-      updateScore(false)
-      document.getElementById('riddle-feedback').textContent = 'Błędna odpowiedź'
-      const keyLock = document.getElementById('key-lock')
-      keyLock.classList.add('shake')
-      keyLock.addEventListener('animationend', () => {
-        keyLock.classList.remove('shake')
-      }, { once: true })
+      onWrong()
     }
   })
+}
+
+function onCorrect() {
+  updateScore(true)
+  const answer = activeRiddle.answer[activeLang]
+  
+  playTransition(answer, () => {
+    setTimeout(() => {
+      loadNewRiddle()
+      document.getElementById('lock-mechanism').innerHTML = ''
+    }, 800)
+  })
+}
+
+function onWrong() {
+  updateScore(false)
+  document.getElementById('riddle-feedback').textContent = 'Błędna odpowiedź'
+  playWrongAnswer()
 }

@@ -43,7 +43,7 @@
 #footer-links {
   display: flex;
   flex-direction: column;
-  align content: center;
+  align-content: center;
   justify-content: center;
   gap: 5px;
 }

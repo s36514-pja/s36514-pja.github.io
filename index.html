@@ -40,43 +40,45 @@
             class="riddle-TextField"
           />
           <div id="key-lock" style="opacity: 0">
-              <!--TUTAJ BĘDZIE GRAFIKA WEKTOROWA W HTML-->
-            <svg id="lock-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-              <path id="lock-shackle"
-                d="
-                M 30 50 
-                l 0 -15 
-                Q 30 15 50 15 
-                Q 70 15 70 35 
-                l 0 15"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="6"
-                stroke-linecap="round"
-              />
-              <rect id="lock-body"
-                x="25" y="50" width="50" height="45" rx="4"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="6"
-              />
-              <path id="lock-keyhole"
-                d=" 
-                  M 50 70
-                  m -3 0
-                  Q 40 60 50 60
-                  q 10 0 3 10
-                  l 2 10
-                  h -10
-                  Z
-                "
-                fill="none"
-                stroke="currentColor"
-                stroke-width="4"
-              />
-            </svg>
-            <!--p>placeholder_to_be_shook</p-->
-        </div>
+            <button id="button" type="submit">
+                <!--TUTAJ BĘDZIE GRAFIKA WEKTOROWA W HTML-->
+              <svg id="lock-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                <path id="lock-shackle"
+                  d="
+                  M 30 50 
+                  l 0 -15 
+                  Q 30 15 50 15 
+                  Q 70 15 70 35 
+                  l 0 15"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+                <rect id="lock-body"
+                  x="25" y="50" width="50" height="45" rx="4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="6"
+                />
+                <path id="lock-keyhole"
+                  d=" 
+                    M 50 70
+                    m -3 0
+                    Q 40 60 50 60
+                    q 10 0 3 10
+                    l 2 10
+                    h -10
+                    Z
+                  "
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="4"
+                />
+              </svg>
+              <!--p>placeholder_to_be_shook</p-->
+            </button>
+          </div>
         </form>
       </div>
       <div id="vislock">
@@ -98,15 +100,13 @@
             <h1 class="showcase-heading">Digital Artwork - "RGB"</h1>            
             <svg id="lil-graphic" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
               <rect x="0" y="0" width="25" height="20" fill="red" />
-              <rect x="25" y="0" width="25" height="20" fill="green" />
-              <rect x="50" y="0" width="25" height="20" fill="blue" />
+              <rect x="25" y="0" width="25" height="20" fill="#00FF00" />
+              <rect x="50" y="0" width="25" height="20" fill="#0000FF" />
             </svg>
           </div>
  
           <div id="showcase-rgb" class="showcase">
-            <div class="link-container"><p>test</p></div> 
-            <div class="link-container"><p>test2</p></div> 
-            <div class="link-container"><p>test3</p></div> 
+
           </div>
         </div>
         <div id="physical-artwork-cmyk">
@@ -120,10 +120,7 @@
             </svg>
           </div>
           <div id="showcase-cmyk" class="showcase">
-            <div class="link-container"><p>test</p></div> 
-            <div class="link-container"><p>test2</p></div> 
-            <div class="link-container"><p>test3</p></div>  
-            <div class="link-container"><p>test4</p></div> 
+
           </div>
         </div>
       </section>

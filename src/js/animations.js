@@ -113,34 +113,39 @@ export function playWrongAnswer() {
   }, { once: true })
 }
 
-export function rotationLock(answerLength,) {
+export function rotationLock(answer) {
   const container = document.getElementById('lock-mechanism')
   container.innerHTML = ''
 
-  Array.from({length: answerLength }).forEach((_,index) => {
+  Array.from(answer).forEach((letter, index) => {
     const block = document.createElement('div')
     block.classList.add('lock-block')
+    block.textContent = letter.toUpperCase()
     block.style.animationDelay = `${index * 0.1}s`
     block.classList.add('active')
     container.appendChild(block)
   })
 }
 
-export function playTransition(answerLength, onComplete) {
-  console.log(answerLength)
-  rotationLock(answerLength)
+export function playTransition(answer, onComplete) {
+  console.log(answer)
+  rotationLock(answer)
   const blocks = document.querySelectorAll('.lock-block')
   const lastBlock = blocks[blocks.length - 1]
   const keyLock = document.getElementById('key-lock')
   const shackle = document.getElementById('lock-shackle')
 
   lastBlock.addEventListener('animationend', () => {
-    shackle.classList.add('open')
-    shackle.addEventListener('transitionend', () => {
-      keyLock.classList.add('fall')
-        keyLock.addEventListener('animationend', () => {
-          onComplete()
-      }, { once: true })
-    })
+    if (shackle) {
+      shackle.classList.add('open')
+      shackle.addEventListener('transitionend', () => {
+        keyLock.classList.add('fall')
+          keyLock.addEventListener('animationend', () => {
+            onComplete()
+        }, { once: true })
+      }, { once:true })
+    } else {
+      onComplete()
+    }
   }, { once: true })
 }

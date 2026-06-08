@@ -1,24 +1,40 @@
+#game-page {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "header" "game";
+  height: 100svh;
+}
+
+.header {
+  grid-area: header;
+  height: 10svh;
+}
+
+#game-area {
+  grid-area: game;
+}
+
 #score-display {
+  grid-area: game; 
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.25rem;
+  margin: 3% 0 1% 0;
   font-family: var(--mono);
   z-index: var(--z-ui);
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
 }
 
 #score-label {
-  font-size: 0.75rem;
+  font-size: 2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text);
 }
 
 #score-value {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(2rem, 6vh, 5rem);
   color: var(--accent);
   line-height: 1;
+  height: 100%;
 }

@@ -55,7 +55,7 @@
       "en": "It cannot be seen, cannot be felt,\nCannot be heard, cannot be smelt.\nIt lies behind stars and under hills,\nAnd empty holes it fills.\nIt comes first and follows after,\nEnds life, kills laughter."
     },
     "answer": {
-      "pl": "ciemność",
+      "pl": "mrok",
       "en": "dark"
     }
   },
@@ -171,7 +171,7 @@
     "id": 15,
     "source": "r/riddles",
     "riddle": {
-      "pl": "Stolarz, który to zbudował, tego nie chciał,\nKupiec, który to nabył, tego nie potrzebował,\nTen, kto tego użył, nigdy tego nie zobaczył.",
+      "pl": "Stolarz jej nie chciał,\nKupiec nie potrzebował,\nTen, dla kogo była, nigdy jej nie zobaczył.",
       "en": "The man that built it didn't want it,\nThe man that bought it didn't need it,\nThe man that used it never saw it."
     },
     "answer": {
@@ -207,11 +207,11 @@
     "id": 18,
     "source": "",
     "riddle": {
-      "pl": "Nie unikniesz mnie, nawet gdy milczysz, to masz mnie w myślach,\nLecz ja potrzebuję Ciebie, żeby wejść do życia.",
+      "pl": "Enigma, spowite mgłą słowa,\nGdy rozpozna znamie, budzi zaufanie,\nŁamie języki, otwiera wrota",
       "en": "I'm everywhere, even when silent, I still appear,\nBut I need action to become real"
     },
     "answer": {
-      "pl": "słowo",
+      "pl": "kod",
       "en": "word"
     }
   }

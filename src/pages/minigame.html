@@ -11,81 +11,43 @@
     <link rel="stylesheet" href="/src/styles/animations.css">
     <title>Minigame</title>
   </head>
-  <body>
+  <body id="game-page">
     <canvas id="bg-canvas"></canvas>
     <main id="minigame-content">
-      <header id="portfolio-header"></header>
+      <header id="portfolio-header" class="header"></header>
       <section id="game-area">
-        <div id="landing">
-
           <div id="landing-backdrop"></div>
 
           <div id="riddle-container">
             <div id="riddle-text"></div>
             <p id="riddle-source"></p>
-            <div id="pass-container">
-              <form id="zagadka-field">
-                <input 
-                  type="text" 
-                  id="psswd" 
-                  name="password" 
-                  required 
-                  autocomplete="off" 
-                  class="riddle-TextField"
-                />
-              </form>
-              <div id="key-lock" style="opacity: 0">
-                  <!--TUTAJ BĘDZIE GRAFIKA WEKTOROWA W HTML-->
-                <svg id="lock-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-                  <path id="lock-shackle"
-                    d="
-                    M 30 50 
-                    l 0 -15 
-                    Q 30 15 50 15 
-                    Q 70 15 70 35 
-                    l 0 15"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="6"
-                  stroke-linecap="round"
-                />
-                <rect id="lock-body"
-                  x="25" y="50" width="50" height="45" rx="4"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="6"
-                />
-                <path id="lock-keyhole"
-                  d=" 
-                    M 50 70
-                    m -3 0
-                    Q 40 60 50 60
-                    q 10 0 3 10
-                    l 2 10
-                    h -10
-                    Z
-                  "
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="4"
-                />
-              </svg>
-              <!--p>placeholder_to_be_shook</p-->
-          </div>
-            </div>
-          </div>
-        <div id="vislock">
-          <div id="lock-mechanism"></div>
-          <h1 id="riddle-feedback"></h1>
-          <div id="score-display">
-            <span id="score-label">Score</span>
-            <span id="score-value">0</span>
-          </div>
-        </div>
 
-    </div>    
+            <form id="zagadka-field">
+              <input 
+                type="text" 
+                id="psswd" 
+                name="password" 
+                required 
+                autocomplete="off" 
+                class="riddle-TextField"
+              />
+              <div id="key-lock" style="opacity: 0">
+                <button id="button" type="submit">
+                    <!--TUTAJ BĘDZIE GRAFIKA WEKTOROWA W HTML-->
+                  <!--p>placeholder_to_be_shook</p-->
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="vislock">
+            <div id="score-display">
+              <span id="score-label">Score</span>
+              <span id="score-value">0</span>
+            </div>
+            <div id="lock-mechanism"></div>
+            <h1 id="riddle-feedback"></h1>
+          </div>
       </section>
-      <footer id="portfolio-footer"></footer>
     </main>
   </body>
 </html>

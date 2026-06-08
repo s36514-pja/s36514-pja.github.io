@@ -78,8 +78,14 @@ if (import.meta.env.DEV) {
 }
 export { question, source, handleSubmit }
 export function getRiddleData() {
+  const clean = (str) =>
+    str.normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .trim()
+
   return { question, source, activeLang,
-    answerLength: activeRiddle.answer[activeLang].length
+    answerLength: activeRiddle.answer[activeLang].length,
+    answer: clean(activeRiddle.answer[activeLang])
   }
 }
 export function rerollRiddle() { 

@@ -9,6 +9,8 @@ import './styles/animations.css'
 import './js/animations.js'
 import { initBackground } from './js/animations.js'
 import { injectNav, injectFooter } from './js/components.js'
+import projects from './data/projects.json'
+const base = import.meta.env.BASE_URL
 
 if (checkSolvedState()) {
   transitionToPortfolio()
@@ -16,13 +18,38 @@ if (checkSolvedState()) {
   refreshUI()
 }
 
+injectNav()
+injectFooter()
 initBackground()
 window.addEventListener('load', () => {
   document.getElementById('key-lock').style.opacity = '1'
 })
 
-injectNav()
-injectFooter()
+buildGallery()
+
+function buildGallery() {
+  const rgbShowcase = document.getElementById('showcase-rgb')
+  const cmykShowcase = document.getElementById('showcase-cmyk')
+
+  projects.forEach(project => {
+    const card = document.createElement('div')
+    card.classList.add('link-container')
+    card.innerHTML = `
+      <a href="${base}src/pages/presentation.html?id=${project.id}">
+      <img src="${project.thumbnail}" alt="${project.title}"/>
+      <p class="card-title">${project.title}</p>
+      <p class="card-description">${project.description}</p>
+      <span class="reveal-link">Read more →</span>
+      </a>
+    `
+    if (project.category === 'rgb') {
+      rgbShowcase.appendChild(card)
+    } else {
+      cmykShowcase.appendChild(card)
+    }
+  })
+}
+
 
 if (import.meta.env.DEV) {
   window.debug.refreshUI = refreshUI

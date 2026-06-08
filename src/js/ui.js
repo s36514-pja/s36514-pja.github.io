@@ -22,8 +22,8 @@ export function onWrongAnswer() {
 export function onCorrectAnswer () {
   saveSolvedState()
   feedback.textContent = ''
-  const { answerLength } = getRiddleData()
-  playTransition(answerLength, transitionToPortfolio)
+  const { answer } = getRiddleData()
+  playTransition(answer, transitionToPortfolio)
   //transitionToPortfolio()
 }
 export function transitionToPortfolio() {
