@@ -37,7 +37,7 @@ canvas.content {
 .link-container {
   min-height: 40vh;
   height: auto;
-  background: var(--debug);
+  background: var(--text-h);
   transition: transform 0.4s ease;
 }
 .link-container:hover {
@@ -70,6 +70,8 @@ canvas.content {
     grid-template-columns 0.5s ease,
     gap 0.2s,
     margin-top 0.3s ease;
+
+  color: black;
 }
 .showcase:has(:hover) {
   margin-top: 1rem;
@@ -123,6 +125,7 @@ canvas.content {
   font-family: var(--mono);
   font-weight: 700;
   font-size: 1.7rem;
+  color: var(--text-h);
   padding: 0 0 0 0.5em;
   margin: 0;
 }

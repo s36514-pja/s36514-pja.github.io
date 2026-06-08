@@ -4,7 +4,7 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js'
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 
 let scene, camera, renderer, geometry, wireframe
-let clock = new THREE.Clock()
+let clock = new THREE.Timer()
 let composer
 
 function getCSSVariable(name) {
@@ -88,7 +88,8 @@ function updateWave(time) {
 
 function animate() {
   requestAnimationFrame(animate)
-  const time = clock.getElapsedTime()
+  clock.update()
+  const time = clock.getElapsed()
   updateWave(time)
   composer.render()
 }
