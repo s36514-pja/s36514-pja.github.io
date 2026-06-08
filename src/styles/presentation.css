@@ -1,0 +1,134 @@
+:root {
+  --z-background: -1;
+  --z-content: 1;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-background);
+  opacity: 0.6;
+  mix-blend-mode: hard-light;
+  transition: opacity 10s ease;
+}
+
+#presentation-content {
+  display: grid;
+  grid-template-rows: 15svh auto auto;
+  grid-template-areas: 
+  "header" 
+  "about" 
+  "footer";
+  height: auto;
+  overflow: visible;
+}
+
+#project-hero {
+  grid-area: about;
+  min-height: 60svh;
+  height: auto;
+  margin: 0 10vw 0 10vw;
+  padding: 5vh 5vw 10vh 5vw;
+  background: var(--bg);
+
+  display: grid;
+  grid-template-rows: 5rem 3rem auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "heading"
+  "nav"
+  "content";
+  gap: 5px;
+}
+
+.about-content-wrapper {
+  grid-area: content;
+}
+.about-content-wrapper img {
+  float: left;
+  width: 20%;
+  margin: 4% 0 10% 0;
+  shape-outside: margin-box;
+  column-span: none;
+  break-inside: avoid;
+}
+
+#project-title {
+  grid-area: heading;
+  align-self: start;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 3rem;
+  padding: 0 0 5% 0;
+}
+
+#project-description {
+  grid-area: content;
+  align-self: start;
+  font-size: 2.2rem;
+  line-height: 1.2;
+  text-align: justify;
+
+  column-count: 2;
+}
+
+#project-highlight {
+  display: content;
+}
+#project-highlight img {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+
+  margin: 0 0 5% 0;
+  padding: 0 0;
+}
+
+#project-images {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 2vh;
+}
+
+#project-images img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+#crumb {
+  grid-area: nav;
+  align-self: start;
+  font-size: 1rem;
+
+  display: inline-block;
+  padding: 0 3px;
+}
+#crumb ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+#crumb li::after {
+  content: "›";
+  padding-left: 0.5rem;
+  color: var(--text);
+}
+#crumb li:last-child::after {
+  content: "";
+}
+#crumb a {
+  color: var(--text);
+  text-decoration: none;
+}
+#crumb a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}

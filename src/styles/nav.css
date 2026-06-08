@@ -28,10 +28,11 @@
 #portfolio-footer {
   grid-area: footer;
   min-height: 100px;
+  height: 15svh;
   display: flex;
   align-content: center;
   justify-content: space-between;
-  padding: 1em 2rem 2em 5rem;
+  padding: 1vh 15vw 2vh 5vw;
   background: var(--bg);
 
   font-family: var(--sans);
@@ -39,9 +40,15 @@
   font-style: italic;
 }
 
-.footer-links {
+#footer-links {
   display: flex;
   flex-direction: column;
   align content: center;
   justify-content: center;
+  gap: 5px;
+}
+
+.footer-text {
+  align-self: center;
+  transform: translateY(-2vh);
 }

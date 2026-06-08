@@ -91,3 +91,20 @@ p {
   }
 }
 
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:visited {
+  color: var(--text); }
+
+a:hover {
+  color: var(--accent);
+}
+
+a:active {
+  color: var(--accent);
+  opacity: 0.7;
+}

@@ -120,6 +120,13 @@ canvas.content {
 }
 
 /*HEADING STYLE*/
+
+#heading-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1%;
+}
+
 .showcase-heading {
   align-self: start;
   font-family: var(--mono);
@@ -128,4 +135,10 @@ canvas.content {
   color: var(--text-h);
   padding: 0 0 0 0.5em;
   margin: 0;
+}
+
+#lil-graphic {
+  width: 5rem;
+  height: auto;
+  display: block;
 }

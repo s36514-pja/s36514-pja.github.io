@@ -89,18 +89,20 @@
     <!--CONTENT-->
     <main id="content">
       <canvas id="bg-canvas"></canvas>
-      <header id="portfolio-header">
-        <p id="logo">LOGO</p>
-        <nav id="nav">
-          <p>PRACE</p>
-          <p>GIERKA</p>
-          <p>ABOUT ME</p>
-        </nav>
-      </header>
+
+      <header id="portfolio-header"></header>
 
       <section id="gallery">
         <div id="digital-artwork-rgb">
-          <h1 class="showcase-heading">Digital Artwork - "RGB"</h1>
+          <div id="heading-container">
+            <h1 class="showcase-heading">Digital Artwork - "RGB"</h1>            
+            <svg id="lil-graphic" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="25" height="20" fill="red" />
+              <rect x="25" y="0" width="25" height="20" fill="green" />
+              <rect x="50" y="0" width="25" height="20" fill="blue" />
+            </svg>
+          </div>
+ 
           <div id="showcase-rgb" class="showcase">
             <div class="link-container"><p>test</p></div> 
             <div class="link-container"><p>test2</p></div> 
@@ -108,8 +110,15 @@
           </div>
         </div>
         <div id="physical-artwork-cmyk">
-          <h1 class="showcase-heading">Physical Artwork - "CMYK"</h1>
-          <!--svg id="cmyk-grpahic"-->
+          <div id="heading-container">
+            <h1 class="showcase-heading">Physical Artwork - "CMYK"</h1>
+            <svg id="lil-graphic" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="25" height="20" fill="cyan" />
+              <rect x="25" y="0" width="25" height="20" fill="magenta" />
+              <rect x="50" y="0" width="25" height="20" fill="yellow" />
+              <rect x="75" y="0" width="25" height="20" fill="black" />
+            </svg>
+          </div>
           <div id="showcase-cmyk" class="showcase">
             <div class="link-container"><p>test</p></div> 
             <div class="link-container"><p>test2</p></div> 
