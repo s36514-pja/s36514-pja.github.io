@@ -1,0 +1,24 @@
+#score-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-family: var(--mono);
+  z-index: var(--z-ui);
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+#score-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+#score-value {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: var(--accent);
+  line-height: 1;
+}

@@ -1,22 +1,23 @@
 :root {
-  --z-background: 0;
-  --z-backdrop: 1;
-  --z-content: 2;
-  --z-ui: 3;
+  --z-background: -1;
+  --z-backdrop: 0;
+  --z-content: 1;
+  --z-ui: 2;
 
   --transition-speed: 1s;
 }
 
 canvas {
-  position: absolute;
+  position: fixed;
   inset: 0;
   z-index: var(--z-background);
   opacity: 0.6;
   mix-blend-mode: soft-light;
+  transition: opacity 10s ease;
 }
 
 #landing {
-  position: absolute;
+  position: fixed;
   width: 100svw;
   height: 100svh;
   overflow: hidden;
@@ -25,13 +26,12 @@ canvas {
 
   display: grid;
   place-items: center;
-  grid-template-rows: 0.8fr minmax(25svh, 30svh);
+  grid-template-rows: 0.8fr minmax(25svh, auto);
   grid-template-columns: 1fr;
   grid-template-areas:
     "riddle"
     "lock";
   gap: 3svh;
-  background-color: var(--bg);
 }
 
 #landing-backdrop {
@@ -57,7 +57,7 @@ canvas {
 
   display: flex;
   gap: 2px;
-  width: 70svw;
+  width: min(70ch, 90%);
   height: auto;
   flex-direction: column;
   align-items: center;
@@ -173,10 +173,13 @@ canvas {
 }
 
 #key-lock {
+  opacity: 0;
+  transition: opacity 0.3 ease;
+
   z-index: var(--z-content);
   position: relative;
   align-self: center;
-  transform: translateY(0);
+  transform: translateY(2%);
   padding: 0% 0% 0% 0%;
 }
 
@@ -207,11 +210,13 @@ canvas {
 
 #content {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
   transition: opacity var(--transition-speed) ease;
 }
 #content.visible {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 #landing.hidden {

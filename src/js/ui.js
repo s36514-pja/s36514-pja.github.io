@@ -1,4 +1,4 @@
-import { getRiddleData, handleSubmit } from './riddle.js'
+import { getRiddleData, handleSubmit, saveSolvedState } from './riddle.js'
 import { playWrongAnswer, playTransition } from './animations.js'
 const { question, source } = getRiddleData();
 // destrukturyzuje wyeksportowaną funckcję z riddle.js
@@ -20,19 +20,21 @@ export function onWrongAnswer() {
   playWrongAnswer()
 }
 export function onCorrectAnswer () {
+  saveSolvedState()
   feedback.textContent = ''
   const { answerLength } = getRiddleData()
   playTransition(answerLength, transitionToPortfolio)
   //transitionToPortfolio()
 }
 export function transitionToPortfolio() {
-  document.body.style.overflow = ''
-  landing.classList.add("hidden");
-  content.classList.add("visible");
+  document.getElementById('bg-canvas').classList.add('content')
+  landing.classList.add('hidden');
+  content.classList.add('visible');
 }
 export function refreshUI() {
   const { question, source } = getRiddleData();
   console.log('refreshUI called:', question, source)
   riddleText.textContent = question
   riddleSource.textContent = source
+  document.getElementById('key-lock').classList.add('ready')
 }

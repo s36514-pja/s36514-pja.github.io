@@ -2,7 +2,6 @@ import riddlesData from '../data/zagadki.json';
 import { lang } from './i18n.js';
 import { onWrongAnswer, onCorrectAnswer, refreshUI } from './ui.js'
 
-
 const arrayLength = riddlesData.length;
 let randomRiddle = riddlesData[Math.floor(Math.random() * arrayLength)];
 console.group('riddleLog')
@@ -87,4 +86,16 @@ export function rerollRiddle() {
   const randomIndex = Math.floor(Math.random() * arrayLength)
   window.debug.setRiddle(randomIndex)
   if (window.debug) window.debug.refreshUI
+}
+
+const STORAGE_KEY = 'riddleSolved'
+
+export function checkSolvedState() {
+  const savedDate = localStorage.getItem(STORAGE_KEY)
+  const todayDate = new Date().toISOString().split('T')[0]
+  return savedDate === todayDate
+}
+export function saveSolvedState() {
+  const todayDate = new Date().toISOString().split('T')[0]
+  localStorage.setItem(STORAGE_KEY, todayDate)
 }

@@ -1,0 +1,47 @@
+#portfolio-header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 15% 1% 7%;
+  background: var(--bg);
+
+  font-size:2rem;
+  font-weight: 700;
+}
+
+#logo {
+  align-self: center;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  margin-right: 3%;
+  gap: 15%;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+#portfolio-footer {
+  grid-area: footer;
+  min-height: 100px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 1em 2rem 2em 5rem;
+  background: var(--bg);
+
+  font-family: var(--sans);
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align content: center;
+  justify-content: center;
+}

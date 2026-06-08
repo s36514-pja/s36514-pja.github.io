@@ -15,15 +15,14 @@
     <link rel="stylesheet" type="text/css" href="/src/styles/style.css"/>
     <link rel="stylesheet" type="text/css" href="/src/styles/animations.css">
     <link rel="stylesheet" type="text/css" href="/src/styles/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="/src/styles/nav.css">
     <title>Home</title>
   </head>
 
   <body>
-    
+    <canvas id="bg-canvas"></canvas> 
     <!--LANDING PAGE-->
     <div id="landing">
-
-      <canvas id="bg-canvas"></canvas>
 
       <div id="landing-backdrop"></div>
 
@@ -40,52 +39,47 @@
             autocomplete="off" 
             class="riddle-TextField"
           />
-          <input 
-            type="submit" 
-            value="✓" 
-            class="riddle-Button"
-          />
+          <div id="key-lock" style="opacity: 0">
+              <!--TUTAJ BĘDZIE GRAFIKA WEKTOROWA W HTML-->
+            <svg id="lock-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+              <path id="lock-shackle"
+                d="
+                M 30 50 
+                l 0 -15 
+                Q 30 15 50 15 
+                Q 70 15 70 35 
+                l 0 15"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+              <rect id="lock-body"
+                x="25" y="50" width="50" height="45" rx="4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="6"
+              />
+              <path id="lock-keyhole"
+                d=" 
+                  M 50 70
+                  m -3 0
+                  Q 40 60 50 60
+                  q 10 0 3 10
+                  l 2 10
+                  h -10
+                  Z
+                "
+                fill="none"
+                stroke="currentColor"
+                stroke-width="4"
+              />
+            </svg>
+            <!--p>placeholder_to_be_shook</p-->
+        </div>
         </form>
       </div>
       <div id="vislock">
-        <div id="key-lock">
-            <!--TUTAJ BĘDZIE GRAFIKA WEKTOROWA W HTML-->
-          <svg id="lock-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
-            <path id="lock-shackle"
-              d="
-              M 30 50 
-              l 0 -15 
-              Q 30 15 50 15 
-              Q 70 15 70 35 
-              l 0 15"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="6"
-              stroke-linecap="round"
-            />
-            <rect id="lock-body"
-              x="25" y="50" width="50" height="45" rx="4"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="6"
-            />
-            <path id="lock-keyhole"
-              d=" 
-                M 50 70
-                m -3 0
-                Q 40 60 50 60
-                q 10 0 3 10
-                l 2 10
-                h -10
-                Z
-              "
-              fill="none"
-              stroke="currentColor"
-              stroke-width="4"
-            />
-          </svg>
-          <!--p>placeholder_to_be_shook</p-->
-      </div>
         <div id="lock-mechanism"></div>
         <h1 id="riddle-feedback"></h1>
       </div>
@@ -94,28 +88,41 @@
     
     <!--CONTENT-->
     <main id="content">
+      <canvas id="bg-canvas"></canvas>
       <header id="portfolio-header">
-        <p>LOGO</p>
-        <p>PRACE</p>
-        <p>GIERKA</p>
-        <p>O mnie</p>
+        <p id="logo">LOGO</p>
+        <nav id="nav">
+          <p>PRACE</p>
+          <p>GIERKA</p>
+          <p>ABOUT ME</p>
+        </nav>
       </header>
 
       <section id="gallery">
         <div id="digital-artwork-rgb">
-          <div id="showcase">
-            
+          <h1 class="showcase-heading">Digital Artwork - "RGB"</h1>
+          <div id="showcase-rgb" class="showcase">
+            <div class="link-container"><p>test</p></div> 
+            <div class="link-container"><p>test2</p></div> 
+            <div class="link-container"><p>test3</p></div> 
           </div>
         </div>
         <div id="physical-artwork-cmyk">
-          <div id="showcase2">
-            
+          <p><h1 class="showcase-heading">Physical Artwork - "CMYK"</h1></p>
+          <div id="showcase-cmyk" class="showcase">
+            <div class="link-container"><p>test</p></div> 
+            <div class="link-container"><p>test2</p></div> 
+            <div class="link-container"><p>test3</p></div>  
+            <div class="link-container"><p>test4</p></div> 
           </div>
         </div>
       </section>
 
       <footer id="portfolio-footer">
-        
+        <p>Autor: Wiktor Radziszewski s36514</p>
+        <div id="links">
+          
+        </div>
       </footer>
 
     </main>

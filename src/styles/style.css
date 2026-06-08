@@ -2,14 +2,11 @@
 :root {
   --debug: magenta;
 
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --text: #9ca3af;
+  --text-h: #f3f4f6;
+  --bg: #16171d;
+  --border: #2e303a;
+  --accent: #bcd4ea;
 
   --heading: font-family: freight-sans-pro, 'Freight Sans', sans-serif;
   --sans: freight-sans-pro, 'Freight Sans', sans-serif;
@@ -30,22 +27,29 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: light) {
   :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #bcd4ea;
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
-}
+    --text: #6b6375;
+    --text-h: #08060d;
+    --bg: #fff;
+    --border: #e5e4e7;
+    --accent: #aa3bff;
+    }
+}*/
 
+* {
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+*::-webkit-scrollbar {
+  display: none;               /* Chrome/Safari */
+}
 
 body {
   margin: 0;
+  overflow-y: auto;
+}
+body:has(#landing:not(.hidden)) {
   overflow: hidden;
 }
 
