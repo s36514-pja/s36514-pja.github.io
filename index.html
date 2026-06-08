@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="artist portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    <link rel="stylesheet" href="https://use.typekit.net/ubn0chn.css">
+    
+    <link rel="icon" type="image/svg+xml" href="/s36514-pja.github.io/favicon.svg" />
+    
+    <title>Home</title>
+    <script type="module" crossorigin src="/s36514-pja.github.io/assets/main-uGfYFE56.js"></script>
+    <link rel="modulepreload" crossorigin href="/s36514-pja.github.io/assets/components-Yle2xFrY.js">
+    <link rel="modulepreload" crossorigin href="/s36514-pja.github.io/assets/animations-BZjG34O_.js">
+    <link rel="stylesheet" crossorigin href="/s36514-pja.github.io/assets/components-jFJv8Vre.css">
+    <link rel="stylesheet" crossorigin href="/s36514-pja.github.io/assets/animations-CuacUvxG.css">
+    <link rel="stylesheet" crossorigin href="/s36514-pja.github.io/assets/main-DC98fC8u.css">
+  </head>
+
+  <body>
+    <canvas id="bg-canvas"></canvas> 
+    <!--LANDING PAGE-->
+    <div id="landing">
+
+      <div id="landing-backdrop"></div>
+
+      <div id="riddle-container">
+        <div id="riddle-text"></div>
+        <p id="riddle-source"></p>
+
+        <form id="zagadka-field">
+          <input 
+            type="text" 
+            id="psswd" 
+            name="password" 
+            required 
+            autocomplete="off" 
+            class="riddle-TextField"
+          />
+          <div id="key-lock" style="opacity: 0">
+            <button id="button" type="submit">
+                <!--TUTAJ BĘDZIE GRAFIKA WEKTOROWA W HTML-->
+              <svg id="lock-svg" viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg">
+                <path id="lock-shackle"
+                  d="
+                  M 30 50 
+                  l 0 -15 
+                  Q 30 15 50 15 
+                  Q 70 15 70 35 
+                  l 0 15"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                />
+                <rect id="lock-body"
+                  x="25" y="50" width="50" height="45" rx="4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="6"
+                />
+                <path id="lock-keyhole"
+                  d=" 
+                    M 50 70
+                    m -3 0
+                    Q 40 60 50 60
+                    q 10 0 3 10
+                    l 2 10
+                    h -10
+                    Z
+                  "
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="4"
+                />
+              </svg>
+              <!--p>placeholder_to_be_shook</p-->
+            </button>
+          </div>
+        </form>
+      </div>
+      <div id="vislock">
+        <div id="lock-mechanism"></div>
+        <h1 id="riddle-feedback"></h1>
+      </div>
+
+    </div>    
+    
+    <!--CONTENT-->
+    <main id="content">
+      <canvas id="bg-canvas"></canvas>
+
+      <header id="portfolio-header"></header>
+
+      <section id="gallery">
+        <div id="digital-artwork-rgb">
+          <div id="heading-container">
+            <h1 class="showcase-heading">Digital Artwork - "RGB"</h1>            
+            <svg id="lil-graphic" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="25" height="20" fill="red" />
+              <rect x="25" y="0" width="25" height="20" fill="#00FF00" />
+              <rect x="50" y="0" width="25" height="20" fill="#0000FF" />
+            </svg>
+          </div>
+ 
+          <div id="showcase-rgb" class="showcase">
+
+          </div>
+        </div>
+        <div id="physical-artwork-cmyk">
+          <div id="heading-container">
+            <h1 class="showcase-heading">Physical Artwork - "CMYK"</h1>
+            <svg id="lil-graphic" viewBox="0 0 100 20" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0" y="0" width="25" height="20" fill="cyan" />
+              <rect x="25" y="0" width="25" height="20" fill="magenta" />
+              <rect x="50" y="0" width="25" height="20" fill="yellow" />
+              <rect x="75" y="0" width="25" height="20" fill="black" />
+            </svg>
+          </div>
+          <div id="showcase-cmyk" class="showcase">
+
+          </div>
+        </div>
+      </section>
+
+      <footer id="portfolio-footer">
+        <p>Autor: Wiktor Radziszewski s36514</p>
+        <div id="links">
+          
+        </div>
+      </footer>
+
+    </main>
+  </body>
+</html>
