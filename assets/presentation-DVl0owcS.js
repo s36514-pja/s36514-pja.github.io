@@ -1,4 +1,4 @@
-import{n as e,r as t,t as n}from"./nav-Gk-iqoRD.js";import{t as r}from"./projects-BJfL8rvN.js";var i=`/`;e(),n(),t();function a(){let e=new URLSearchParams(window.location.search).get(`id`);return r.find(t=>t.id===e)??null}function o(){let e=a();if(!e){document.getElementById(`project-title`).textContent=`404 nie istnieje`;return}document.getElementById(`project-title`).textContent=e.title,document.getElementById(`project-description`).textContent=e.body,document.getElementById(`crumb`).innerHTML=`
+import{n as e,r as t,t as n}from"./nav-Gk-iqoRD.js";import{t as r}from"./projects-CsecO6BL.js";var i=`/`;e(),n(),t();function a(){let e=new URLSearchParams(window.location.search).get(`id`);return r.find(t=>t.id===e)??null}function o(){let e=a();if(!e){document.getElementById(`project-title`).textContent=`404 nie istnieje`;return}document.getElementById(`project-title`).textContent=e.title,document.getElementById(`project-description`).textContent=e.body,document.getElementById(`crumb`).innerHTML=`
     <ol>
       <li><a href="${i}index.html">Home</a></li>
       <li><a href="#">${e.category.toUpperCase()}</a></li>
