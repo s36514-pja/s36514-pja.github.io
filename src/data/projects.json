@@ -8,11 +8,11 @@
     "body": "Podczas pobytu na molo, gdzie robiłem zdjęcia pejzażu, zostałem poproszony przez Yankę, żeby zrobić jej zdjęcia, zgodziłem się. Wiedziałem, że jest mało światła, słońce już zaszło, więc starałem się wykorzystać odbicie nieba w wodzie, żeby podświetlić sylwetkę i profil.",
 	  "links": "",
     "images": [
-      "/images/yanka/_C018292.jpg",
-      "/images/yanka/_C018286.jpg",
-	    "/images/yanka/_C018294.jpg",
-	    "/images/yanka/_C018297.jpg",
-	    "/images/yanka/_C018242.jpg"
+      "/images/yanka/C018292.jpg",
+      "/images/yanka/C018286.jpg",
+	    "/images/yanka/C018294.jpg",
+	    "/images/yanka/C018297.jpg",
+	    "/images/yanka/C018242.jpg"
     ],
     "alt": "Kobieta nad wodą",
     "year": "2026"
@@ -41,10 +41,10 @@
 	  "links": " ",
     "images": [
       "/images/storyboard/storyboardzik_0030_1.png",
-	  "/images/storyboard/storyboardzik_0028_2.png",
-	  "/images/storyboard/storyboardzik_0026_3.png",
-	  "/images/storyboard/storyboardzik_0024_4.png",
-	  "/images/storyboard/storyboardzik_0023_5.png",
+      "/images/storyboard/storyboardzik_0028_2.png",
+      "/images/storyboard/storyboardzik_0026_3.png",
+      "/images/storyboard/storyboardzik_0024_4.png",
+      "/images/storyboard/storyboardzik_0023_5.png",
       "/images/storyboard/storyboardzik_0021_6.png"
     ],
     "alt": "Storyboard - wizualnie opowiedziana historia",
@@ -59,9 +59,9 @@
     "body": "Praca malarska przedstawiająca jedną z dydaktyczek uczelni. Musiałem nauczyć się poprawnej konstrukcji twarzy, żeby nadać malunkowi wymiarową głębię i podobiznę. Podczas malowania  tej pracy bardzo podobało mi się tworzenie prostych przejść tonalnych, jednak myślę, że ogółem ten portret nie jest wystarczająco odważny w kwestii stylu.",
   	"links": "",
     "images": [
-		"/images/portret_dydaktyka/20260424_090745.jpg",
-		"/images/portret_dydaktyka/20260424_020017.jpg"
-	],
+      "/images/portret_dydaktyka/20260424_090745.jpg",
+      "/images/portret_dydaktyka/20260424_020017.jpg"
+	  ],
     "year": "2026"
   },
     {
@@ -73,10 +73,10 @@
     "body": "Jak wspomniałem w swoim `about me`, interesuję się dźwiękiem, a co za tym idzie akustyką i siłą rzeczy, falami. Jest to dla mnie fascynujące ile aspektów fizycznych działa na tej samej teoretycznej podstawie - fale wodne, światło, powietrze i dźwięk etc etc. Z tej okazji wykonałem projekt reliefu w 3D używając do tego wyrażeń matematycznych rzeczywistej fali, a potem przeniosłem go do rzeczywistości wykonując relief z pianki introligatorskiej.",
 	  "links": "",
     "images": [
-		"/images/relief/Artboard_2-100.jpg",
-		"/images/relief/Artboard_3-100.jpg",
-		"/images/relief/Artboard_4-100.jpg"
-	],
+      "/images/relief/Artboard_2-100.jpg",
+      "/images/relief/Artboard_3-100.jpg",
+      "/images/relief/Artboard_4-100.jpg"
+    ],
     "year": "2025"
   },
     {
@@ -88,13 +88,13 @@
     "body": "Na zaliczenie semestru z japonistyki mieliśmy zrobić żurawia z origami. To zajęcie było zaskakująco przyjemne, wykonałem ich kilka, całkiem dobrze mi to poszło. Z nudów zrobiłem im całkiem ciekawe zdjęcia telefonem, jak siedzą u mnie na biurku.",
 	  "links": "",
     "images": [
-		"/images/zuraw_origami/20260204_211001.jpg",
-		"/images/zuraw_origami/20260128_221757.jpg",
-		"/images/zuraw_origami/20260128_221907.jpg",
-		"/images/zuraw_origami/20260128_221920.jpg",
-		"/images/zuraw_origami/20260128_221935.jpg",
-		"/images/zuraw_origami/20260129_185249.jpg"
-	],
+      "/images/zuraw_origami/20260204_211001.jpg",
+      "/images/zuraw_origami/20260128_221757.jpg",
+      "/images/zuraw_origami/20260128_221907.jpg",
+      "/images/zuraw_origami/20260128_221920.jpg",
+      "/images/zuraw_origami/20260128_221935.jpg",
+      "/images/zuraw_origami/20260129_185249.jpg"
+    ],
     "year": "2025"
   },
     {
@@ -106,8 +106,8 @@
     "body": "Camera obscura to pierwowzór aparatu fotograficznego. Pozwala uzyskać odwrócony obraz rzeczywisty. Zakomponowałem zdjęcie, wykonałem je aparatem i odwróciłem w korekcie.",
 	  "links": "",
     "images": [
-		"/images/camera_obscura/corrected-1.jpg"
-	],
+      "/images/camera_obscura/corrected-1.jpg"
+    ],
     "year": "2025"
   }
 ]

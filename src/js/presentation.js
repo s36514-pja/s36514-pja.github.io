@@ -41,8 +41,6 @@ function buildPresentation() {
     highlight.appendChild(heroImg)
   }
 
-
-
   const imageContainer = document.getElementById('project-images')
   project.images.forEach(src => {
     const img = document.createElement('img')
