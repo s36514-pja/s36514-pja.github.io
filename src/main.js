@@ -1,15 +1,18 @@
 import './js/ui.js'
 import { refreshUI, transitionToPortfolio } from './js/ui.js'
 import { question, source, handleSubmit, rerollRiddle, checkSolvedState } from './js/riddle.js';
+import './js/animations.js'
+import { initBackground } from './js/animations.js'
+import { injectNav, injectFooter } from './js/components.js'
+
 import './styles/style.css'
 import './styles/landing.css'
 import './styles/nav.css'
 import './styles/portfolio.css'
 import './styles/animations.css'
-import './js/animations.js'
-import { initBackground } from './js/animations.js'
-import { injectNav, injectFooter } from './js/components.js'
+
 import projects from './data/projects.json'
+
 const base = import.meta.env.BASE_URL
 
 if (checkSolvedState()) {
