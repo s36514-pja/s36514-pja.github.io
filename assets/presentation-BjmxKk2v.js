@@ -1,1 +1,0 @@
-import{n as e,r as t,t as n}from"./nav-DhHo7PFt.js";e(),n(),t(),i();function r(){let e=new URLSearchParams(window.location.search).get(`id`);return projects.find(t=>t.id===e)??null}function i(){if(!r()){document.getElementById(`project-title`).textContent=`404 nie istnieje`;return}}
