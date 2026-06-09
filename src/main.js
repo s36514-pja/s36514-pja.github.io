@@ -39,10 +39,10 @@ function buildGallery() {
     card.classList.add('link-container')
     card.innerHTML = `
       <a href="${base}src/pages/presentation.html?id=${project.id}">
-      <img src="${project.thumbnail}" alt="${project.title}"/>
-      <p class="card-title">${project.title}</p>
-      <p class="card-description">${project.description}</p>
-      <span class="reveal-link">Read more →</span>
+        <img src="${project.thumbnail}" alt="${project.title}"/>
+        <h2 class="card-title">${project.title}</h2>
+        <p class="card-description">${project.description}</p>
+        <span class="reveal-link">Przejdź do proejktu →</span>
       </a>
     `
     if (project.category === 'rgb') {

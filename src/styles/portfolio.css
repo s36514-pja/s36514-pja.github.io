@@ -35,10 +35,29 @@ canvas.content {
 
 /*LINK-CONTAINER*/
 .link-container {
+  display: flex;
   min-height: 40vh;
   height: auto;
   background: var(--text-h);
   transition: transform 0.4s ease;
+  overflow: hidden;
+  background: var(--bg);
+  flex-direction: column;
+}
+.link-container a {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  flex: 1;
+  text-decoration: none;
+}
+.link-container img {
+  flex: 1;
+  width: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 .link-container:hover {
   transform: scaleY(1.1);
@@ -51,6 +70,24 @@ canvas.content {
 .link-container:hover .reveal-link {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/*CARDS*/
+.card-title {
+  padding: 1% 1%;
+  font-weight: 700;
+  font-family: var(--sans);
+  font-size: 2rem;
+}
+.card-description {
+  padding: 1% 5%;
+  font-size: 1.5rem;
+}
+.reveal-link {
+  text-decoration: underLine;
+  line-height: 1.6;
+  padding: 5% 10%;
 }
 
 .showcase {
@@ -74,7 +111,7 @@ canvas.content {
   color: black;
 }
 .showcase:has(:hover) {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .showcase .link-container:nth-child(1) {
   
@@ -142,3 +179,5 @@ canvas.content {
   height: auto;
   display: block;
 }
+
+

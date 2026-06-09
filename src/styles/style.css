@@ -45,9 +45,13 @@
   display: none;               /* Chrome/Safari */
 }
 
+html {
+  overflow-x: hidden;
+}
 body {
   margin: 0;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 body:has(#landing:not(.hidden)) {
   overflow: hidden;

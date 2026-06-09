@@ -14,6 +14,11 @@
 #logo {
   align-self: center;
 }
+#logo img {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+}
 
 #nav {
   display: flex;
@@ -45,10 +50,11 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .footer-text {
   align-self: center;
   transform: translateY(-2vh);
+  line-height: 1;
 }

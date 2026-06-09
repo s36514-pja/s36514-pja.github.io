@@ -5,12 +5,12 @@ export function injectNav() {
   if (!nav) return
   nav.innerHTML = `
     <a id="logo" href="${base}index.html">
-      <img src="${base}public/favicon.svg" alt="Logo" id="logo-img"/>
+      <img src="${base}favicon.svg" alt="Logo" id="logo-img"/>
     </a>
     <nav id="nav">
-      <a href="${base}index.html">PRACE</a> 
-      <a href="${base}src/pages/minigame.html">GIERKA</a>
-      <a href="${base}src/pages/about.html">O MNIE</a>
+      <a href="${base}index.html">Prace</a> 
+      <a href="${base}src/pages/minigame.html">Zagadki</a>
+      <a href="${base}src/pages/about.html">O mnie</a>
     </nav>
   `
 }
